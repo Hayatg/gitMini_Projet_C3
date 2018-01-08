@@ -1,0 +1,311 @@
+/*GENERAL*/
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: Arial, serif;
+	font-size: 15px;
+
+}
+.container {
+width:80%;
+margin: 0 auto;
+padding:0px;
+align: center;
+border: solid 2px gray;
+overflow: hidden;
+}
+.tab{align: center;}
+/*.tab-2{}
+.tab-2 input{display: block;margin-bottom: 10px}
+tr{transition:all .25s ease-in-out}*/
+tr:hover{background-color:#EEE;cursor: pointer}
+h1, h2, h3, h4
+{
+	color: #444;
+}
+h1{
+	font-family: "Crete Round", serif;
+	font-size: 45px;
+	
+}
+h3
+{
+	font-size: 30px;
+
+}
+h4{
+	font-size: 24px;
+	
+
+}
+p{
+	line-height: 20px;
+	color:#777;
+}
+ul
+{
+	list-style: none;
+}
+a
+{
+	text-decoration: none;
+	color: #444;
+}
+.wrapper{
+	width:auto;
+	margin: 0 auto;
+	padding:0 10px;
+	align: center;
+}
+.blue
+{
+	color:blue;
+}
+.clear{
+	clear: both;
+}
+small
+{
+	font-size: 13px;
+	font-style: italic;
+}
+
+/*HEADER*/
+
+header
+{
+	height: 120px;
+}
+header h1
+{
+	float: left;
+	margin-top: 32px;
+}
+header nav
+{
+	float: right;
+	margin-top: 50px;
+}
+header nav ul li 
+{
+	float: left;
+	display: inline-block;
+}
+
+header nav ul li a
+{
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-right: 50px;
+
+}
+/*MAIN IMAGE*/
+#main_image
+{
+	height: 150px;
+	width: auto;
+	background: url("img/images.jpg") ;
+
+}
+#main_image h2
+{
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 70px 0 40px 0;
+	margin-bottom: 20px;
+}
+.button-1
+{
+	display: block;
+	width: 120px;
+	height: 50px;
+	background: #ff7a00;
+	color: #fff;
+	font-size: 20px;
+	margin: 0 auto;
+	padding-top: 150px 0 40px 0;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 3px;
+}
+/*AJOUTER UN NOUVEAU FOLLOWER*/
+#addme ul
+{
+	margin: 80px 0;
+}
+#addme ul li
+{
+	WIDTH:30%;
+	float: left;
+	padding-top: 140px;
+	text-align: center;
+	margin-right: 10px;
+}
+#addme h4
+{
+	text-transform: uppercase
+	margin-bottom: 20px;
+}
+#addme p 
+{
+	margin-bottom: 20px;
+
+}
+
+/*TABLEAU DES FOLLOWERS*/
+
+#followers
+{
+	background-color: #efefef;
+	padding: 30px 0;
+	text-align: center;
+
+}
+#followers article
+{
+	width: auto;
+	height: 100%;
+	display: inline-block;
+
+	border-radius: 10px;
+
+}
+#followers article
+{
+	margin-right: 40px;
+	margin-left: 40px;
+	align: center;
+}
+.overlay
+{
+	background: rgba(255,255,255,0.85);
+	height: 100%;
+	width: 50%;
+	padding: 20px;
+	border-radius: 10px 0 0 10px;
+	text-align: center;
+}
+article h4
+{
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	text-align: center;
+}
+#followers p{
+
+	text-align: center;
+	margin-bottom: 20px;
+
+}
+#followers h3
+{
+	width: 400px;
+	text-transform: uppercase;
+	margin:0 auto 20px auto;
+	border-bottom: 1px solid #02b8dd;
+	padding-bottom: 20px;
+
+}
+.button-2
+{
+	display: block;
+	width: 120px;
+	height: 40px;
+	background: #ff7a00;
+	color: #fff;
+	font-size: 20px;
+	margin: 0 auto;
+	padding-top: 150px 0 40px 0;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.button-2:hover
+{
+	color: #fff;
+	background-color: #02b8dd;
+	
+}
+
+/*CONTACT*/
+
+#contact
+{
+	padding: 60px 0;
+	text-align: center;
+
+}
+#contact h3
+{
+	width: 400px;
+	text-transform: uppercase;
+	margin:0 auto 20px auto;
+	border-bottom: 1px solid #02b8dd;
+	padding-bottom: 20px;
+
+}
+form
+{
+	margin: 60px 0 20px 0;
+
+}
+label
+{
+	font-weight: bold;
+	font-size: 20px;
+	margin-right: 10px;
+	color: #777;
+}
+input[type="text"]
+{
+	padding: 10px;
+	font-size: 20px;
+	margin-right: 20px;
+	border: 2px solid #ddd;
+	border-radius: 3px;
+}
+.button-3
+{
+	color: #fff;
+	width: 120px;
+	height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 11px;
+	background-color: green;
+	border-style: none;
+	border-radius: 3px;
+}
+.button-3:hover
+{
+	color: #fff;
+	background-color: #444;
+
+}
+
+
+/*FOOTER*/
+footer
+{
+	height: 260px;
+	background-color: #ff7100;
+}
+footer h1
+{
+	color: #fff;
+	text-align: center;
+	padding-top: 80px;
+}
+.copyright
+{
+	text-align: center;
+	font-weight: bold;
+	padding-top: 30px;
+	color:#777;
+}

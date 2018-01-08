@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demba Sarr Followers</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+    <link rel="icon" href="img/icone.png">
+        
+        <style>
+            
+            .container{overflow: hidden}
+            .tab{float: left;}
+            .tab-2{margin-left: 50px}
+            .tab-2 input{display: block;margin-bottom: 10px}
+            tr{transition:all .25s ease-in-out}
+            tr:hover{background-color:#EEE;cursor: pointer}
+            
+        </style>
+        
+    </head>
+    <body>
+        
+        <div class="container">
+            
+    <header>
+        <div class="wrapper">
+            <h1>My Followers <img src="img/follow.jpg" width="40" height="40"/></h1>
+            <nav>
+                <ul>
+                    <li> <a href="#main_image">Home</a></li>
+                    <li> <a href="#addme">Add Me</a></li>
+                    <li> <a href="#followers"> Followers</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="main_image">
+        <div class="wrapper">
+            <h2>
+                
+            </h2>
+            
+        </div>
+    </section>
+    <section id="addme">
+        <div align="center">
+            
+                    
+                    <p>
+<h3>New Follower, Enter your Information details:</h3>
+
+                     
+            <div align="center">
+                <table>
+                <tr><td>First Name :</td><td><input type="text" name="fname" id="fname"></td></tr>
+                <tr> <td>Name :</td><td><input type="text" name="name" id="name"></td></tr>
+               <tr> <td>Email :</td><td><input type="text" name="email" id="email"></td></tr>
+                <tr><td>Phone Number :</td><td><input type="number" name="tel" id="tel"></td></tr>
+                
+                <tr><td><button class="button-3" onclick="addFollow();">Add</button></td>
+              <td>  <input type="reset" name="cancel" value="Cancel" class="button-2"></td></tr>
+               </table>
+            </div>
+    
+
+
+</p>
+                
+                
+                <div class="clear"></div>
+            
+        </div>
+    </section>
+           
+        <section id="followers">
+        <div class="wrapper">
+
+            <article align="center">
+                <h3>All My Followers</h3>
+                <div class="tab tab-1">
+                <table id="table" border="1" bgcolor="#ffff4c">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Edacy</td>
+                        <td>cohort3</td>
+                        <td>c3@edacy.com</td>
+                        <td>+22789080</td>
+                  
+                    </tr>
+                    
+                </table>
+                  <div class="clear"></div>
+            
+        </div>
+            </div>
+        </section>
+            <section id="contact">
+        <div class="wrapper">
+            <h3> contactez-nous</h3>
+            <p></p>
+            <FORM>
+                <LABEL for="name">Nom</LABEL>
+                <input id="name" type="text" name="nom" placeholder="Votre nom">
+                <LABEL for="email">Email</LABEL>
+                <input id="email" type="text" name="email" placeholder="Votre email">
+                <input class="button-3" type="submit" name="ok" value="OK">
+            </FORM>
+        </div>
+    </section>
+    <footer>
+        <div class="wrapper">
+            <h1>My Followers <span class="blue">.</span> </h1>
+            <div class="copyright">copyright &copy 2018, tous droits réservés</div>
+        </div>
+
+        
+    </footer>
+    </div>
+<script>
+            
+            var rIndex,
+                table = document.getElementById("table");
+            
+            // check the empty input
+            function checkEmptyInput()
+            {
+                var isEmpty = false,
+                    fname = document.getElementById("fname").value,
+                    name = document.getElementById("name").value,
+                    email = document.getElementById("email").value;
+                    tel = document.getElementById("tel").value;
+            
+                if(fname === ""){
+                    alert("First Name Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(name === ""){
+                    alert("Last Name Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(email === ""){
+                    alert("Email Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(tel === ""){
+                    alert("Phone number Connot Be Empty");
+                    isEmpty = true;
+                }
+                return isEmpty;
+            }
+            
+            // add Row
+            function addFollow()
+            {
+                // get the table by id
+                // create a new row and cells
+                // get value from input text
+                // set the values into row cell's
+                if(!checkEmptyInput()){
+                var newRow = table.insertRow(table.length),
+                    cell1 = newRow.insertCell(0),
+                    cell2 = newRow.insertCell(1),
+                    cell3 = newRow.insertCell(2),
+                    cell4 = newRow.insertCell(3),
+                    fname = document.getElementById("fname").value,
+                    name = document.getElementById("name").value,
+                    email = document.getElementById("email").value;
+                    tel = document.getElementById("tel").value;
+            
+                cell1.innerHTML = fname;
+                cell2.innerHTML = name;
+                cell3.innerHTML = email;
+                 cell4.innerHTML = tel;
+                // call the function to set the event to the new row
+                selectedRowToInput();
+            }
+            }
+            
+            // display selected row data into input text
+            function selectedRowToInput()
+            {
+                
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    table.rows[i].onclick = function()
+                    {
+                      // get the seected row index
+                      rIndex = this.rowIndex;
+                      document.getElementById("fname").value = this.cells[0].innerHTML;
+                      document.getElementById("lname").value = this.cells[1].innerHTML;
+                      document.getElementById("age").value = this.cells[2].innerHTML;
+                    };
+                }
+            }
+            selectedRowToInput();
+            
+            
+        </script>
+        
+        
+    
+            </article>
+            
+                <div class="clear"></div>
+        </div>
+    </section>
+        
+    </body>
+</html>
